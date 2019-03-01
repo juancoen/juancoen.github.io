@@ -1,153 +1,67 @@
 <html>
   <head>
     <style>
+      @keyframes scroll-text {
+        0%   { top: 0px; }
+        30%  { top: -885px; }
+        50%  { top: -885px; }
+        70% { top: -1680px; }
+        90% { top: -1680px; }
+        100% { top: 0px; }
+      }
+
       body {
-        background-color: black;
-        color: white;
+        font-family: "DINProMedium",Arial,sans-serif;
+        font-size: 70px;
         text-align: center;
-        height: 100%;
-        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
       }
 
-      div.container {
-        display: inline-block;
-        height: 100%;
-      }
-
-      div.container div.inner {
-        margin: 0;
+      .left {
         position: absolute;
-        top: 50%;
-        left: 45%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        text-align: left;
-      }
-      
-      .lds-spinner {
-        color:  white;
-        height: 72px;
-        width: 72px;
+        top: 0px;
+        left: 50px;
       }
 
-      .line1 {
-        font-size: 72px;
+      .center {
+        position: absolute;
+        top: 0px;
+        left: 340px;
+        width: 210px;
+        overflow: hidden;
+        text-align: center;
+        animation: scroll-text 3s infinite;
       }
 
-      .line2 {
-        margin-left: 72px;
-        font-size: 36px;
+      .right {
+        position: absolute;
+        top: 0px;
+        left: 555px;
       }
 
+      .animated {
+        position: absolute;
+      }
+
+      .container {
+        position: absolute;
+        top: 410px;
+        width: 100%;
+        height: 80px;
+        left: 100px;
+        overflow: hidden;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="inner">
-        <div class="line1">
-          <svg class="lds-spinner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-            <g transform="rotate(0 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9375s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(22.5 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.875s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(45 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8125s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(67.5 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.75s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(90 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6875s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(112.5 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.625s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(135 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5625s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(157.5 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(180 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4375s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(202.5 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.375s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(225 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3125s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(247.5 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.25s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(270 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.1875s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(292.5 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.125s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(315 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.0625s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-            <g transform="rotate(337.5 50 50)">
-              <rect x="46" y="6.5" rx="12.42" ry="1.7550000000000001" width="8" height="19" fill="#28292f">
-                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite">
-                </animate>
-              </rect>
-            </g>
-          </svg>
-          Loading...
-        </div>
-        <div class="line2">(2 days 3 hours left)</div>
+      <div class="left">It's pretty </div>
+      <div class="center">fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool
+        easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast
+        cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy
+        fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool easy fast cool
       </div>
+      <div class="right"> with the Anypoint Platform</div>
     </div>
   </body>
 </html>
